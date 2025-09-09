@@ -1,0 +1,23 @@
+# Arquivos do Visual Studio
+.vs/
+*.db
+*.opendb
+
+# Binários de build
+*.exe
+*.obj
+*.pdb
+*.dll
+*.lib
+*.ilk
+
+# Pastas de build
+Debug/
+Release/
+x64/
+build/
+
+# Outros temporários
+*.log
+*.user
+*.suo
