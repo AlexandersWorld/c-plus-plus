@@ -123,6 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Constructors.cpp" />
     <ClCompile Include="EnumExamples.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
