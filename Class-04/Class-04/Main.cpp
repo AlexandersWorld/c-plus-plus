@@ -1,8 +1,14 @@
 #include <iostream>
 
-class Entity {
+class Printable
+{
 public:
-	std::string GetName() { return "Entity"; }
+	virtual std::string GetClassName() = 0;
+};
+
+class Entity : public Printable {
+public:
+	virtual std::string GetName() = 0;
 };
 
 class Player : public Entity {
@@ -10,8 +16,8 @@ private:
 	std::string m_Name;
 public:
 	Player(const std::string& name) : m_Name(name) {}
-
-	std::string GetName() { return m_Name; }
+	std::string GetClassName() override { return "Player"; }
+	std::string GetName() override { return m_Name; }
 };
 
 void PrintName(Entity* entity)
@@ -21,7 +27,7 @@ void PrintName(Entity* entity)
 
 int main()
 {
-	Entity* e = new Entity();
+	Entity* e = new Player("Tubarão leitoa");
 	PrintName(e);
 
 	Player* p = new Player("Zagalo13");
