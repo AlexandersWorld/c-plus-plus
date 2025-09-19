@@ -1,39 +1,23 @@
 #include <iostream>
 
-class Example
-{
-public:
-	Example()
-	{
-		std::cout << "Created Entity!" << std::endl;
-	}
-
-	Example(int x)
-	{
-		std::cout << "Created Entity with " << x << "!" << std::endl;
-	}
-};
+using String = std::string;
 
 class Entity
 {
 private:
-	std::string m_Name;
-	int m_DebugCount = 0;
-	Example m_Example;
+	String m_Name;
 public:
-	Entity()
-		: m_Example(8)
-	{
-	};
+	Entity() : m_Name("Unknown") {}
+	Entity(const String& name) : m_Name(name) {}
 
-	Entity(const std::string& name) 
-		: m_Name(name) {}
-
-	const std::string& GetName() const { return m_Name; }
+	const String& GetName() const { return m_Name; }
 };
 
 int main()
 {
-	Entity e0;
+	Entity entity;
+
+	std::cout << entity.GetName() << std::endl;
+
 	return 0;
 }
