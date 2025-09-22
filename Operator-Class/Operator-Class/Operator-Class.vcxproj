@@ -123,6 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ImplicitConversion.cpp" />
     <ClCompile Include="New.cpp" />
     <ClCompile Include="Operator-Class.cpp" />
   </ItemGroup>

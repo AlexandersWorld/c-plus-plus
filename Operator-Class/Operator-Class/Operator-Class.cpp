@@ -1,32 +1,23 @@
 #include <iostream>
 
 using String = std::string;
+using namespace std;
 
 class Entity
 {
-private:
-    String m_Name;
-    int m_Age;
 public:
-    Entity(const String& name) : m_Name(name), m_Age(-1) {}
-    Entity(int age) : m_Age(age), m_Name("Unkown") {}
+    int x, y;
+
+    Entity(int x, int y)
+    {
+        this->x = x;
+        this->y = y;
+    }
 };
-
-
-static void Printable(const Entity& entity)
-{
-}
 
 int main()
 {
-    Entity a("Alexander");
-    Entity b(22);
-
-    Printable(22);
-    Printable(String("Alexader"));
-    Printable(Entity("Alexader"));
-
-    std::cout << "Hello World!!!!!\n";
+    cout << "HEllo world" << endl;
 
     return 0;
 }
