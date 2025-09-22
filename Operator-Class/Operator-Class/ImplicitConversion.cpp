@@ -17,7 +17,7 @@ static void Printable(const Entity& entity)
 {
 }
 
-int main()
+int main3()
 {
     Entity a("Alexander");
     Entity b(22);
