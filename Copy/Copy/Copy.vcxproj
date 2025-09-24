@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{6f4a958f-fc63-4dcf-9ed9-56223438a6d3}</ProjectGuid>
-    <RootNamespace>OperatorClass</RootNamespace>
+    <ProjectGuid>{6ff4968b-0bf1-47ef-adda-3bb0dafb3bf3}</ProjectGuid>
+    <RootNamespace>Copy</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -123,10 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ImplicitConversion.cpp" />
-    <ClCompile Include="New.cpp" />
-    <ClCompile Include="Operator-Class.cpp" />
-    <ClCompile Include="Operators&amp;Operator.cpp" />
+    <ClCompile Include="Copy.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

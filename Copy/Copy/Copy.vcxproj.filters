@@ -15,17 +15,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Operator-Class.cpp">
+    <ClCompile Include="Copy.cpp">
       <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="New.cpp">
-      <Filter>Arquivos de Recurso</Filter>
-    </ClCompile>
-    <ClCompile Include="ImplicitConversion.cpp">
-      <Filter>Arquivos de Recurso</Filter>
-    </ClCompile>
-    <ClCompile Include="Operators&amp;Operator.cpp">
-      <Filter>Arquivos de Recurso</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
