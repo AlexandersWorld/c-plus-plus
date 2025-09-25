@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{817c6c5d-66f5-40dc-a93b-152affb51d6f}</ProjectGuid>
-    <RootNamespace>DynamicArrays</RootNamespace>
+    <ProjectGuid>{7085a4b9-4795-4bc6-8673-acb6e0f0c8e3}</ProjectGuid>
+    <RootNamespace>ArrowOperatorDynamicArrays</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
