@@ -14,4 +14,6 @@ int main1()
     std::cout << *ppX << std::endl;
 
     std::cin.get();
+
+    return 0;
 }
