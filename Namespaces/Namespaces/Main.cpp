@@ -2,7 +2,7 @@
 #include <string>
 
 namespace apple {
-	void print(const std::string& text)
+	void print(const char* text)
 	{
 		std::cout << text << std::endl;
 	}
