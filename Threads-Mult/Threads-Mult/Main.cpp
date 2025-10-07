@@ -1,32 +1,40 @@
 #include <iostream>
+#include <chrono>
 #include <thread>
 
-static bool s_Finished = false;
-
-void DoWork()
+class Timer
 {
-	using namespace std::chrono_literals;
+	std::chrono::time_point<std::chrono::steady_clock> start, end;
+	std::chrono::duration<float> duration;
 
-	while (!s_Finished)
+public:
+	Timer()
 	{
-		std::cout << "Working..\n";
-		std::this_thread::sleep_for(1s);
+		start = std::chrono::high_resolution_clock::now();
 	}
+	~Timer()
+	{
+		end = std::chrono::high_resolution_clock::now();
+		duration = end - start;
+
+		float ms = duration.count() * 1000.0f;
+
+		std::cout << "Tiimer took " << ms << " seconds\n";
+	}
+};
+
+void Function()
+{
+	Timer timer;
+	for (int i = 0; i < 100; i++)
+		std::cout << "Hello" << std::endl;
 }
 
 int main()
 {
-	std::cout << "Hello, World!" << std::endl;
 
-	std::thread worker(DoWork);
-
-	std::cin.get();
-	s_Finished = true;
-
-	worker.join();
-
-
-	std::cout << "Finished!" << std::endl;
+	Function();
+	
 	std::cin.get();
 	return 0;
 }
