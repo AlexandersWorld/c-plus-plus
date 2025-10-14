@@ -3,31 +3,33 @@
 class Base
 {
 public:
-	Base() { std::cout << "Base Constructor\n"; }
-	virtual ~Base() { std::cout << "Base Destroctor\n"; }
+	Base() {}
+	virtual ~Base() {}
 };
 
 class Derived : public Base
 {
 public:
-	Derived() { std::cout << "Derived Constructor\n"; }
-	~Derived() { std::cout << "Derived Destroctor\n"; }
+	Derived() {}
+	~Derived() override {}
+};
+
+class AnotherClass : public Base
+{
+public:
+	AnotherClass() {}
+	~AnotherClass() override {}
 };
 
 int main()
 {
-	std::cout << "Alexander's world!" << std::endl;
 
-	Base* base = new Base();
-	delete base;
-	std::cout << "-----------------------------\n";
 	Derived* derived = new Derived();
+	Base* base = derived;
+
+	AnotherClass* ac = dynamic_cast<AnotherClass*>(base);
+
+	std::cout << "Alexander's world!" << std::endl;
 	delete derived;
-	std::cout << "-----------------------------\n";
-	Base* poly = new Derived();
-	delete poly;
-
-
-	std::cin.get();
 	return 0;
 }
