@@ -4,7 +4,7 @@
 class Entity
 {
 public:
-	virtual void PrintName() {}
+	virtual void PrintName(std::string Name) {}
 };
 
 class Player : public Entity
@@ -27,7 +27,7 @@ int main()
 
 	if (p)
 	{
-
+		p->PrintName("Alexander's World!!");
 	}
 	Player* p1 = dynamic_cast<Player*>(actuallyPlayer);
 }
